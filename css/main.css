@@ -4,14 +4,11 @@ body {
 
 #container {
     height: 820px;
-    max-height: 50%;
     width: 920px;
-    /*background-color: green;*/
     margin-left:auto;
     margin-right: auto;
     margin-top:;
     margin-bottom: 10px;
-    /*overflow:hidden;*/
 }
 
 #container  .smallDiv {
@@ -19,7 +16,6 @@ body {
     height:51.25px;
     width: 57.5px;
     box-sizing: border-box;
-    /*border: dotted 1px #c2c2c2;*/
     float:left;
 }
 
@@ -29,7 +25,6 @@ body {
     margin-left:auto;
     margin-right: auto;
     margin-bottom: 30px;
-    /*background-color: red;*/
     text-align: center;
 
 }
@@ -38,8 +33,10 @@ button {
     width:160px;
     height:30px;
     margin: 10px; auto;
-    background-color: #4285f4;
+    background:linear-gradient( 180deg, #4285f4, black 95%);
     outline: none;
     border: none;
     color: #fff;
+    border-radius: 10px;
+
 }
