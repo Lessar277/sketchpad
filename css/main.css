@@ -1,14 +1,22 @@
 body {
-    background-color:#fff;
+    background-color:#e2e2e2;
 }
 
+/*#wrapper {
+    width: 100%;
+    min-width: 100px;
+}*/
+
 #container {
-    height: 820px;
+    height: 920px;
     width: 920px;
-    margin-left:auto;
-    margin-right: auto;
-    margin-top:;
-    margin-bottom: 10px;
+    margin-top: 40px;
+    margin-left:150px;
+   /* margin-right: 100px;*/
+    margin-bottom: 0px;
+    float:left;   
+    display: inline-block;
+    position: absolute;
 }
 
 #container  .smallDiv {
@@ -18,25 +26,43 @@ body {
     box-sizing: border-box;
     float:left;
 }
+#options {
+    float:left;
+    margin-top: 200px;
+    margin-left: 20px;
+    height: 300px;
+    width: 300px;
+    max-width: 300px;
+    /*background-color: red;*/
+    position:relative;
+ }
 
 #settings {
-    width: 920px;
-    height: 100px;
-    margin-left:auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-    text-align: center;
-
+    width:100%;
+    list-style-type: none;
+    position: absolute;
+    right: 0;
+    top: 10;
+    display: none;
 }
-
-button {
-    width:160px;
+.setting, .unpressed {
+    width:95%;
     height:30px;
     margin: 10px; auto;
-    background:linear-gradient( 180deg, #4285f4, black 95%);
+    background:linear-gradient( 180deg, #aaa, black 65%);
     outline: none;
     border: none;
     color: #fff;
     border-radius: 10px;
-
+    /*opacity: 0.9;*/
 }
+.setting:hover, .unpressed:hover {
+    opacity: 1;
+    background:linear-gradient( 0deg, #aaa, black 65%);
+}
+
+.pressed {
+    background:linear-gradient( 0deg, #aaa, black 65%);
+}
+
+

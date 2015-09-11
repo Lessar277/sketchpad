@@ -7,8 +7,42 @@ function randomRGB() {
     var randNum = function () {return Math.floor(Math.random() * 256);};
     return 'rgb(' + randNum() + ', ' + randNum() + ', ' + randNum() + ')';
 }
-//function to generate increasingly black opacity;
+//generate a default 16x16 grid
+$(document).ready(function(){
+    var divCounter = 16;
+    var $smallDiv = $('<div class="smallDiv"></div>');
+    var $smallDivWidth = $containerWidth / divCounter + 'px';
+    var $smallDivHeight = $containerHeight / divCounter + 'px';
+    //add squares to grid
+    for (i = 1; i <= divCounter * divCounter; i++){
+        $('#container').append($smallDiv.clone());
+    }
+    $('.smallDiv').css("width", $smallDivWidth);
+    $('.smallDiv').css("height", $smallDivHeight);
+    $('.smallDiv').css('opacity', 1);
+       $('.smallDiv').mouseenter(function(){
+            $(this).css('background-color', 'white');
+        });
+        $('.smallDiv').click(function(){
+            $(this).css('background-color', 'black');
+        });
 
+});
+//function to show the settings menu
+function showSettings() {
+    $('#settings').slideToggle();
+    $('#show-settings').toggleClass('pressed');
+}
+
+//Menu up and Show Settings button as unpressed after user begins drawing
+function menuUp() {
+    $('#settings').slideUp("slow");
+    $('#show-settings').removeClass('pressed');
+}
+
+$('#container').mouseenter(function(){
+    menuUp();
+});
 
 //ask the user what size his sketchpad will be and set dimension vars
 //appropriately;
