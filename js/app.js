@@ -35,6 +35,7 @@ function gridSettings(){
     }
     $('.smallDiv').css("width", $smallDivWidth);
     $('.smallDiv').css("height", $smallDivHeight);
+    $('.smallDiv').css('opacity', 1);
 }
 
 //This prompts and loads the grid with a default black mouseover;
@@ -63,7 +64,7 @@ function setGridRandom() {
 
 function setGridGradient() {
     $(gridSettings()).ready(function(){
-        $('.smallDiv').css('opacity', 1);
+        // $('.smallDiv').css('opacity', 1);
         $('.smallDiv').css('background-color', 'black');
         $('.smallDiv').mouseenter(function(){
             var opacity = $(this).css('opacity');
@@ -73,14 +74,6 @@ function setGridGradient() {
                 $(this).css('opacity', 0);
             }
         });
-        $('.smallDiv').click(function(){
-            var opacity = $(this).css('opacity');
-            if (opacity < 1) {
-                $(this).css('opacity', opacity + 0.1);
-            } else {
-                $(this).css('opacity', 1);
-            }
-        });
     });
 }
 
@@ -88,7 +81,7 @@ function setGridGradient() {
 function setGridTrail() {
     $(gridSettings()).ready(function(){
         $('.smallDiv').css('background-color', 'black');
-        $('.smallDiv').css('opacity', 1);
+        // $('.smallDiv').css('opacity', 1);
         $('.smallDiv').mouseenter(function(){
             $(this).fadeTo(300, 0.1);
         });
@@ -102,5 +95,5 @@ function setGridTrail() {
 //function to clean the grid without resetting it
 function cleanGrid () {
     $('.smallDiv').css('background-color', 'black');
-    $('.smallDiv').css('opacity', 1);
+    $('.smallDiv').css('opacity', 1); 
 }
